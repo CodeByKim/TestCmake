@@ -8,6 +8,18 @@
 
 int main()
 {
+    std::thread t = std::thread([](){
+        while(true)
+        {
+            player p("kkr");
+            p.move();
+            p.attack();
+            p.print();
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+        }
+
+    });
+
 	/*boost::asio::io_context context;
 	boost::asio::deadline_timer timer(context);
 	timer.expires_from_now(boost::posix_time::seconds(1));
@@ -18,17 +30,7 @@ int main()
 
 	context.run();*/
 
-	std::thread t = std::thread([]() {
-		player p("kkr");
-		p.move();
-		p.attack();
 
-		while (true)
-		{
-			std::cout << "run thread..." << std::endl;
-			std::this_thread::sleep_for(std::chrono::seconds(1));
-		}
-	});
 
 	getchar();
 

@@ -14,3 +14,8 @@ void player::attack()
 {
 	std::cout << m_name << " attack..." << std::endl;
 }
+
+void player::print()
+{
+    std::cout << "player print" << std::endl;
+}

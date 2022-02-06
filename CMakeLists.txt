@@ -4,7 +4,7 @@ project ("CMakeProject1")
 
 # set(Boost_INCLUDE_DIR C:/local/boost_1_78_0)
 # set(Boost_LIBRARY_DIR C:/local/boost_1_78_0/stage/lib)
-
+set(CMAKE_CXX_STANDARD 17)
 INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
 
 add_executable (CMakeProject1 "CMakeProject1.cpp" 
